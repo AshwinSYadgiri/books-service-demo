@@ -44,7 +44,7 @@ pipeline {
                     jacoco execPattern: '**/target/coverage-reports/*.exec'
 
                     //Sonar checks
-                    sonarExecuteScan(script: this, owner:'AshwinSYadgiri', sonarTokenCredentialsId: 'sonarId', serverUrl: 'https://sonar.tools.sap/')
+                    sonarExecuteScan(script: this, owner:'AshwinSYadgiri', repository:'books-service-demo', sonarTokenCredentialsId: 'sonarId', serverUrl: 'https://sonar.tools.sap/')
                     //check for the quality gate
                     script { 
                         withSonarQubeEnv('sonar'){ 
