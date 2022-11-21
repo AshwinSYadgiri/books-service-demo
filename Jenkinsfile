@@ -18,7 +18,7 @@ pipeline {
                     deleteDir()
                     // sh 'git clone https://github.com/AshwinSYadgiri/books-service-demo.git ./ '
                     checkout scm
-                    setupPipelineEnvironment script: this
+                    setupCommonPipelineEnvironment script: this
                 }
             }
         }
